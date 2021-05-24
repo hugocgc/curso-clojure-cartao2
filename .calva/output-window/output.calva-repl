@@ -1,0 +1,1788 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Aborting connect, error determining connect sequence.
+; Evaluating file: credit-card.clj
+#'curso-clojure-cartao2.db.credit-card/available-limit
+clj꞉curso-clojure-cartao2.db.credit-card꞉> 
+; Evaluating file: transaction.clj
+#object[java.util.HashSet 0x428d0204 [[100M]]]
+; Syntax error (ClassCastException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:17:1).
+; java.util.HashSet cannot be cast to java.lang.Number
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.db.credit-card꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#{[100M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+100M
+#{[100M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+100M
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/wrong-type-for-attribute Value 100 is not a valid :bigdec for attribute :transaction/value
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/wrong-type-for-attribute Value 100 is not a valid :bigdec for attribute :transaction/value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Value 100 is not a valid :bigdec for attribute :transaction/value", :db/error :db.error/wrong-type-for-attribute}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/wrong-type-for-attribute Value 100 is not a valid :bigdec for attribute :transaction/value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/wrong-type-for-attribute Value 100 is not a valid :bigdec for attribute :transaction/value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Value 100 is not a valid :bigdec for attribute :transaction/value", :db/error :db.error/wrong-type-for-attribute}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.error$arg invokeStatic "error.clj" 77]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$wrong_type_for_attribute invokeStatic "db.clj" 2958]
+  [datomic.db$wrong_type_for_attribute invoke "db.clj" 2956]
+  [datomic.db$canonicalize_v invokeStatic "db.clj" 2971]
+  [datomic.db$canonicalize_v invoke "db.clj" 2960]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3096]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.transaction$add_transaction_BANG_ invokeStatic "transaction.clj" 7]
+  [curso_clojure_cartao2.db.transaction$add_transaction_BANG_ invoke "transaction.clj" 5]
+  [curso_clojure_cartao2.controllers.transaction$new_transaction_BANG_ invokeStatic "transaction.clj" 11]
+  [curso_clojure_cartao2.controllers.transaction$new_transaction_BANG_ invoke "transaction.clj" 7]
+  [curso_clojure_cartao2.controllers.transaction$eval11764 invokeStatic "transaction.clj" 16]
+  [curso_clojure_cartao2.controllers.transaction$eval11764 invoke "transaction.clj" 16]
+  [clojure.lang.Compiler eval "Compiler.java" 7177]
+  [clojure.lang.Compiler load "Compiler.java" 7636]
+  [curso_clojure_cartao2.controllers.transaction$eval11751 invokeStatic "form-init4688402661101875967.clj" 1]
+  [curso_clojure_cartao2.controllers.transaction$eval11751 invoke "form-init4688402661101875967.clj" 1]
+  [clojure.lang.Compiler eval "Compiler.java" 7177]
+  [clojure.lang.Compiler eval "Compiler.java" 7132]
+  [clojure.core$eval invokeStatic "core.clj" 3214]
+  [clojure.core$eval invoke "core.clj" 3210]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__975$fn__976 invoke "interruptible_eval.clj" 87]
+  [clojure.lang.AFn applyToHelper "AFn.java" 152]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 665]
+  [clojure.core$with_bindings_STAR_ invokeStatic "core.clj" 1973]
+  [clojure.core$with_bindings_STAR_ doInvoke "core.clj" 1973]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__975 invoke "interruptible_eval.clj" 87]
+  [clojure.main$repl$read_eval_print__9086$fn__9089 invoke "main.clj" 437]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 437]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x59d7fa45]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/wrong-type-for-attribute Value 100 is not a valid :bigdec for attribute :transaction/value
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@d0298251, :db-after datomic.db.Db@e78a6cf8, :tx-data [#datom[13194139534329 50 #inst "2021-05-24T12:21:15.670-00:00" 13194139534329 true] #datom[17592186045434 83 #uuid "bb3aad9c-812b-4d76-b7cf-d0a89f6b1674" 13194139534329 true] #datom[17592186045434 84 100M 13194139534329 true] #datom[17592186045434 85 :food 13194139534329 true] #datom[17592186045434 86 #inst "2021-05-19T00:00:00.000-00:00" 13194139534329 true] #datom[17592186045434 87 "Outback" 13194139534329 true] #datom[17592186045434 88 17592186045432 13194139534329 true]], :tempids {-9223301668109598050 17592186045434}}} 0xc3ca8d5]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@766be148: 
+  {:db-before datomic.db.Db@e78a6cf8,
+   :db-after datomic.db.Db@3a36371e,
+   :tx-data
+   [#datom[13194139534331 50 #inst "2021-05-24T12:21:21.618-00:00" 13194139534331 true] #datom[17592186045436 83 #uuid "8d16ca6f-8a71-44bf-8cf7-ed31404a1332" 13194139534331 true] #datom[17592186045436 84 100M 13194139534331 true] #datom[17592186045436 85 :food 13194139534331 true] #datom[17592186045436 86 #inst "2021-05-19T00:00:00.000-00:00" 13194139534331 true] #datom[17592186045436 87 "Outback" 13194139534331 true] #datom[17592186045436 88 17592186045432 13194139534331 true]],
+   :tempids {-9223301668109598049 17592186045436}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@68cbc654: 
+  {:db-before datomic.db.Db@3a36371e,
+   :db-after datomic.db.Db@6e85f642,
+   :tx-data
+   [#datom[13194139534333 50 #inst "2021-05-24T12:21:30.824-00:00" 13194139534333 true] #datom[17592186045438 83 #uuid "f322e4c1-e960-45fa-9d7c-16251b299bb6" 13194139534333 true] #datom[17592186045438 84 100M 13194139534333 true] #datom[17592186045438 85 :food 13194139534333 true] #datom[17592186045438 86 #inst "2021-05-19T00:00:00.000-00:00" 13194139534333 true] #datom[17592186045438 87 "Outback" 13194139534333 true] #datom[17592186045438 88 17592186045432 13194139534333 true]],
+   :tempids {-9223301668109598048 17592186045438}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ClassCastException) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:11).
+; clojure.lang.PersistentArrayMap cannot be cast to java.lang.Throwable
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (AssertionError) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:16:1).
+; Limit not available for this transaction
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@2dad986a: 
+  {:db-before datomic.db.Db@6e85f642,
+   :db-after datomic.db.Db@91161ca2,
+   :tx-data
+   [#datom[13194139534335 50 #inst "2021-05-24T12:27:18.722-00:00" 13194139534335 true] #datom[17592186045440 83 #uuid "7c8a0fd3-4cc7-4a01-a30b-b24c47ed6fea" 13194139534335 true] #datom[17592186045440 84 6000M 13194139534335 true] #datom[17592186045440 85 :electronics 13194139534335 true] #datom[17592186045440 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534335 true] #datom[17592186045440 87 "Infonorte" 13194139534335 true] #datom[17592186045440 88 17592186045430 13194139534335 true]],
+   :tempids {-9223301668109598047 17592186045440}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@33595677: 
+  {:db-before datomic.db.Db@91161ca2,
+   :db-after datomic.db.Db@917d4f42,
+   :tx-data
+   [#datom[13194139534337 50 #inst "2021-05-24T12:27:21.967-00:00" 13194139534337 true] #datom[17592186045442 83 #uuid "689c369e-383c-408c-8a9c-a5a818ae7f84" 13194139534337 true] #datom[17592186045442 84 6000M 13194139534337 true] #datom[17592186045442 85 :electronics 13194139534337 true] #datom[17592186045442 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534337 true] #datom[17592186045442 87 "Infonorte" 13194139534337 true] #datom[17592186045442 88 17592186045430 13194139534337 true]],
+   :tempids {-9223301668109598046 17592186045442}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@2c5ec936: 
+  {:db-before datomic.db.Db@917d4f42,
+   :db-after datomic.db.Db@43f5dc1a,
+   :tx-data
+   [#datom[13194139534339 50 #inst "2021-05-24T12:27:29.448-00:00" 13194139534339 true] #datom[17592186045444 83 #uuid "1dcb51e3-2d06-489e-abca-1236db415864" 13194139534339 true] #datom[17592186045444 84 6000M 13194139534339 true] #datom[17592186045444 85 :electronics 13194139534339 true] #datom[17592186045444 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534339 true] #datom[17592186045444 87 "Infonorte" 13194139534339 true] #datom[17592186045444 88 17592186045430 13194139534339 true]],
+   :tempids {-9223301668109598045 17592186045444}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@59bbfda5: 
+  {:db-before datomic.db.Db@43f5dc1a,
+   :db-after datomic.db.Db@b1e971d7,
+   :tx-data
+   [#datom[13194139534341 50 #inst "2021-05-24T12:27:29.993-00:00" 13194139534341 true] #datom[17592186045446 83 #uuid "b6aa9f47-7b5c-4db9-a0db-38c649ed764c" 13194139534341 true] #datom[17592186045446 84 6000M 13194139534341 true] #datom[17592186045446 85 :electronics 13194139534341 true] #datom[17592186045446 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534341 true] #datom[17592186045446 87 "Infonorte" 13194139534341 true] #datom[17592186045446 88 17592186045430 13194139534341 true]],
+   :tempids {-9223301668109598044 17592186045446}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@5e2ad01f: 
+  {:db-before datomic.db.Db@b1e971d7,
+   :db-after datomic.db.Db@ada019f3,
+   :tx-data
+   [#datom[13194139534343 50 #inst "2021-05-24T12:27:30.369-00:00" 13194139534343 true] #datom[17592186045448 83 #uuid "145832f7-bbdf-4a4f-b322-dc2cbdff1810" 13194139534343 true] #datom[17592186045448 84 6000M 13194139534343 true] #datom[17592186045448 85 :electronics 13194139534343 true] #datom[17592186045448 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534343 true] #datom[17592186045448 87 "Infonorte" 13194139534343 true] #datom[17592186045448 88 17592186045430 13194139534343 true]],
+   :tempids {-9223301668109598043 17592186045448}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@5c7d7971: 
+  {:db-before datomic.db.Db@ada019f3,
+   :db-after datomic.db.Db@8137b47e,
+   :tx-data
+   [#datom[13194139534345 50 #inst "2021-05-24T12:27:30.587-00:00" 13194139534345 true] #datom[17592186045450 83 #uuid "1c8ed795-682e-40c3-8af1-d2410945b1d5" 13194139534345 true] #datom[17592186045450 84 6000M 13194139534345 true] #datom[17592186045450 85 :electronics 13194139534345 true] #datom[17592186045450 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534345 true] #datom[17592186045450 87 "Infonorte" 13194139534345 true] #datom[17592186045450 88 17592186045430 13194139534345 true]],
+   :tempids {-9223301668109598042 17592186045450}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@7fb0837c: 
+  {:db-before datomic.db.Db@8137b47e,
+   :db-after datomic.db.Db@16b75d4,
+   :tx-data
+   [#datom[13194139534347 50 #inst "2021-05-24T12:27:30.773-00:00" 13194139534347 true] #datom[17592186045452 83 #uuid "76af08fb-39e2-4859-9d5f-061495c7b095" 13194139534347 true] #datom[17592186045452 84 6000M 13194139534347 true] #datom[17592186045452 85 :electronics 13194139534347 true] #datom[17592186045452 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534347 true] #datom[17592186045452 87 "Infonorte" 13194139534347 true] #datom[17592186045452 88 17592186045430 13194139534347 true]],
+   :tempids {-9223301668109598041 17592186045452}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@1949fec7: 
+  {:db-before datomic.db.Db@16b75d4,
+   :db-after datomic.db.Db@b8d66bb0,
+   :tx-data
+   [#datom[13194139534349 50 #inst "2021-05-24T12:27:30.984-00:00" 13194139534349 true] #datom[17592186045454 83 #uuid "2a1e85e0-1d61-4e42-83ba-afd8952df96f" 13194139534349 true] #datom[17592186045454 84 6000M 13194139534349 true] #datom[17592186045454 85 :electronics 13194139534349 true] #datom[17592186045454 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534349 true] #datom[17592186045454 87 "Infonorte" 13194139534349 true] #datom[17592186045454 88 17592186045430 13194139534349 true]],
+   :tempids {-9223301668109598040 17592186045454}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@6c27178c: 
+  {:db-before datomic.db.Db@b8d66bb0,
+   :db-after datomic.db.Db@9e24db5d,
+   :tx-data
+   [#datom[13194139534351 50 #inst "2021-05-24T12:27:31.198-00:00" 13194139534351 true] #datom[17592186045456 83 #uuid "86e50728-6826-4baf-bb3e-c9db374b66e8" 13194139534351 true] #datom[17592186045456 84 6000M 13194139534351 true] #datom[17592186045456 85 :electronics 13194139534351 true] #datom[17592186045456 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534351 true] #datom[17592186045456 87 "Infonorte" 13194139534351 true] #datom[17592186045456 88 17592186045430 13194139534351 true]],
+   :tempids {-9223301668109598039 17592186045456}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@43de1e60: 
+  {:db-before datomic.db.Db@9e24db5d,
+   :db-after datomic.db.Db@ec9b36e,
+   :tx-data
+   [#datom[13194139534353 50 #inst "2021-05-24T12:27:31.405-00:00" 13194139534353 true] #datom[17592186045458 83 #uuid "b6e3e9b5-ae14-43aa-b92e-3a3356f9ad3f" 13194139534353 true] #datom[17592186045458 84 6000M 13194139534353 true] #datom[17592186045458 85 :electronics 13194139534353 true] #datom[17592186045458 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534353 true] #datom[17592186045458 87 "Infonorte" 13194139534353 true] #datom[17592186045458 88 17592186045430 13194139534353 true]],
+   :tempids {-9223301668109598038 17592186045458}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@65d9507a: 
+  {:db-before datomic.db.Db@ec9b36e,
+   :db-after datomic.db.Db@7a355a0d,
+   :tx-data
+   [#datom[13194139534355 50 #inst "2021-05-24T12:27:31.597-00:00" 13194139534355 true] #datom[17592186045460 83 #uuid "53df3bfd-3464-4868-97ba-84621de50b65" 13194139534355 true] #datom[17592186045460 84 6000M 13194139534355 true] #datom[17592186045460 85 :electronics 13194139534355 true] #datom[17592186045460 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534355 true] #datom[17592186045460 87 "Infonorte" 13194139534355 true] #datom[17592186045460 88 17592186045430 13194139534355 true]],
+   :tempids {-9223301668109598037 17592186045460}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@24d7475a: 
+  {:db-before datomic.db.Db@7a355a0d,
+   :db-after datomic.db.Db@9fcd2764,
+   :tx-data
+   [#datom[13194139534357 50 #inst "2021-05-24T12:27:31.821-00:00" 13194139534357 true] #datom[17592186045462 83 #uuid "25357359-9547-4145-a39f-990183b85ae1" 13194139534357 true] #datom[17592186045462 84 6000M 13194139534357 true] #datom[17592186045462 85 :electronics 13194139534357 true] #datom[17592186045462 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534357 true] #datom[17592186045462 87 "Infonorte" 13194139534357 true] #datom[17592186045462 88 17592186045430 13194139534357 true]],
+   :tempids {-9223301668109598036 17592186045462}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/client-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: logic.clj
+#'curso-clojure-cartao2.logic/valid-transaction?
+clj꞉curso-clojure-cartao2.logic꞉> 
+; Execution error (NullPointerException) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:10).
+; null
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (NullPointerException) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:10).
+; null
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (NullPointerException) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:10).
+; null
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (NullPointerException) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:10).
+; null
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#<promise$settable_future$reify__6969@311edaae: 
+  {:db-before datomic.db.Db@9fcd2764,
+   :db-after datomic.db.Db@bc8ced18,
+   :tx-data
+   [#datom[13194139534359 50 #inst "2021-05-24T17:42:27.200-00:00" 13194139534359 true] #datom[17592186045464 83 #uuid "736b580c-27f7-49c2-b63a-7d0f577c85cb" 13194139534359 true] #datom[17592186045464 84 6000M 13194139534359 true] #datom[17592186045464 85 :electronics 13194139534359 true] #datom[17592186045464 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534359 true] #datom[17592186045464 87 "Infonorte" 13194139534359 true] #datom[17592186045464 88 17592186045430 13194139534359 true]],
+   :tempids {-9223301668109598035 17592186045464}}>
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: logic.clj
+#'curso-clojure-cartao2.logic/valid-transaction?
+clj꞉curso-clojure-cartao2.logic꞉> 
+; Evaluating file: logic.clj
+#'curso-clojure-cartao2.logic/limit-available?
+clj꞉curso-clojure-cartao2.logic꞉> 
+; Evaluating file: transaction.clj
+#datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@bc8ced18, :db-after datomic.db.Db@5472046f, :tx-data [#datom[13194139534361 50 #inst "2021-05-24T17:49:50.123-00:00" 13194139534361 true] #datom[17592186045466 83 #uuid "8de9a8df-1f22-4539-90ae-9e6b4889930c" 13194139534361 true] #datom[17592186045466 84 6000M 13194139534361 true] #datom[17592186045466 85 :electronics 13194139534361 true] #datom[17592186045466 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534361 true] #datom[17592186045466 87 "Infonorte" 13194139534361 true] #datom[17592186045466 88 17592186045430 13194139534361 true]], :tempids {-9223301668109598034 17592186045466}}} 0x6c68a66e]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (ClassCastException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:18:1).
+; datomic.db.Db cannot be cast to datomic.Connection
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ClassCastException) at datomic.api/transact (api.clj:105).
+; datomic.db.Db cannot be cast to datomic.Connection
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error compiling if at (src/curso_clojure_cartao2/controllers/transaction.clj:12:5).
+; Too many arguments to if
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (ClassCastException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:18:1).
+; datomic.db.Db cannot be cast to datomic.Connection
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ClassCastException) at datomic.api/transact (api.clj:105).
+; datomic.db.Db cannot be cast to datomic.Connection
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@be825b0d, :db-after datomic.db.Db@235dd74d, :tx-data [#datom[13194139534368 50 #inst "2021-05-24T17:54:36.584-00:00" 13194139534368 true] #datom[17592186045473 83 #uuid "13a8cd3c-8283-4517-9ee8-bb90da0f08db" 13194139534368 true] #datom[17592186045473 84 6000M 13194139534368 true] #datom[17592186045473 85 :electronics 13194139534368 true] #datom[17592186045473 86 #inst "2021-05-22T00:00:00.000-00:00" 13194139534368 true] #datom[17592186045473 87 "Infonorte" 13194139534368 true] #datom[17592186045473 88 17592186045430 13194139534368 true]], :tempids {-9223301668109598031 17592186045473}}} 0x5048d3b6]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (AssertionError) at curso-clojure-cartao2.controllers.transaction/new-transaction! (transaction.clj:15).
+; Limit not available for this transaction
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ClassCastException) at datomic.uri/storage-protocol (uri.clj:28).
+; curso_clojure_cartao2.components.storage$connection cannot be cast to java.lang.String
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+; Evaluating file: storage.clj
+; Syntax error (ClassCastException) compiling at (src/curso_clojure_cartao2/components/storage.clj:23:1).
+; curso_clojure_cartao2.components.storage$connection cannot be cast to java.lang.String
+; Evaluation of file storage.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+; Execution error (ClassCastException) at datomic.uri/storage-protocol (uri.clj:28).
+; curso_clojure_cartao2.components.storage$connection cannot be cast to java.lang.String
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+true
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+; Evaluating file: storage.clj
+#'curso-clojure-cartao2.components.storage/storage
+clj꞉curso-clojure-cartao2.components.storage꞉> 
+; Evaluating file: core.clj
+#datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@9696a8d5, :db-after datomic.db.Db@5e8bbcf9, :tx-data [#datom[13194139534312 50 #inst "2021-05-24T17:56:53.048-00:00" 13194139534312 true] #datom[72 10 :client/id 13194139534312 true] #datom[72 40 56 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 42 38 13194139534312 true] #datom[72 62 "Client's identifier" 13194139534312 true] #datom[73 10 :client/name 13194139534312 true] #datom[73 40 23 13194139534312 true] #datom[73 41 35 13194139534312 true] #datom[73 62 "Client's full name" 13194139534312 true] #datom[74 10 :client/email 13194139534312 true] #datom[74 40 23 13194139534312 true] #datom[74 41 35 13194139534312 true] #datom[74 42 37 13194139534312 true] #datom[74 62 "Client's email" 13194139534312 true] #datom[75 10 :client/cpf 13194139534312 true] #datom[75 40 23 13194139534312 true] #datom[75 41 35 13194139534312 true] #datom[75 42 37 13194139534312 true] #datom[75 62 "Client's CPF number" 13194139534312 true] #datom[76 10 :credit-card/id 13194139534312 true] #datom[76 40 56 13194139534312 true] #datom[76 41 35 13194139534312 true] #datom[76 42 38 13194139534312 true] #datom[76 62 "Credit card's identifier" 13194139534312 true] #datom[77 10 :credit-card/number 13194139534312 true] #datom[77 40 23 13194139534312 true] #datom[77 41 35 13194139534312 true] #datom[77 42 37 13194139534312 true] #datom[77 62 "Credit card's number" 13194139534312 true] #datom[78 10 :credit-card/cvv 13194139534312 true] #datom[78 40 23 13194139534312 true] #datom[78 41 35 13194139534312 true] #datom[78 62 "Credit card's CVV" 13194139534312 true] #datom[79 10 :credit-card/expiry-date 13194139534312 true] #datom[79 40 25 13194139534312 true] #datom[79 41 35 13194139534312 true] #datom[79 62 "Credit card's expiry date" 13194139534312 true] #datom[80 10 :credit-card/available-limit 13194139534312 true] #datom[80 40 61 13194139534312 true] #datom[80 41 35 13194139534312 true] #datom[80 62 "Credit card's current available limit value" 13194139534312 true] #datom[81 10 :credit-card/total-limit 13194139534312 true] #datom[81 40 61 13194139534312 true] #datom[81 41 35 13194139534312 true] #datom[81 62 "Credit card's total limit value" 13194139534312 true] #datom[82 10 :credit-card/client 13194139534312 true] #datom[82 40 20 13194139534312 true] #datom[82 41 35 13194139534312 true] #datom[82 62 "Owner of the credit Card" 13194139534312 true] #datom[83 10 :transaction/id 13194139534312 true] #datom[83 40 56 13194139534312 true] #datom[83 41 35 13194139534312 true] #datom[83 42 38 13194139534312 true] #datom[83 62 "Transaction's identifier" 13194139534312 true] #datom[84 10 :transaction/value 13194139534312 true] #datom[84 40 61 13194139534312 true] #datom[84 41 35 13194139534312 true] #datom[84 62 "Transaction's value" 13194139534312 true] #datom[85 10 :transaction/category 13194139534312 true] #datom[85 40 21 13194139534312 true] #datom[85 41 35 13194139534312 true] #datom[85 62 "Category of the transaction" 13194139534312 true] #datom[86 10 :transaction/date 13194139534312 true] #datom[86 40 25 13194139534312 true] #datom[86 41 35 13194139534312 true] #datom[86 62 "Date of the transaction" 13194139534312 true] #datom[87 10 :transaction/merchant 13194139534312 true] #datom[87 40 23 13194139534312 true] #datom[87 41 35 13194139534312 true] #datom[87 62 "Merchant responsible for the transaction" 13194139534312 true] #datom[88 10 :transaction/credit-card 13194139534312 true] #datom[88 40 20 13194139534312 true] #datom[88 41 35 13194139534312 true] #datom[88 62 "Credit card used in the transaction" 13194139534312 true] #datom[0 13 72 13194139534312 true] #datom[0 13 73 13194139534312 true] #datom[0 13 74 13194139534312 true] #datom[0 13 75 13194139534312 true] #datom[0 13 76 13194139534312 true] #datom[0 13 77 13194139534312 true] #datom[0 13 78 13194139534312 true] #datom[0 13 79 13194139534312 true] #datom[0 13 80 13194139534312 true] #datom[0 13 81 13194139534312 true] #datom[0 13 82 13194139534312 true] #datom[0 13 83 13194139534312 true] #datom[0 13 84 13194139534312 true] #datom[0 13 85 13194139534312 true] #datom[0 13 86 13194139534312 true] #datom[0 13 87 13194139534312 true] #datom[0 13 88 13194139534312 true]], :tempids {-9223301668109598025 77, -9223301668109598023 79, -9223301668109598024 78, -9223301668109598020 82, -9223301668109598018 84, -9223301668109598028 74, -9223301668109598022 80, -9223301668109598015 87, -9223301668109598026 76, -9223301668109598021 81, -9223301668109598017 85, -9223301668109598019 83, -9223301668109598027 75, -9223301668109598014 88, -9223301668109598030 72, -9223301668109598029 73, -9223301668109598016 86}}} 0xc2cf4ec]
+clj꞉curso-clojure-cartao2.core꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/client.clj:17:30).
+; No such namespace: md
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
+; Evaluating file: client.clj
+[{:keys [:name :email :cpf]} {:name "Fulano de Tal", :cpf "12345600000", :email "fulano@gmail.com"}]
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
+[{:keys [:name :email :cpf]} {:name "Fulano de Tal", :cpf "12345600000", :email "fulano@gmail.com"}]
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/client.clj:1:8036).
+; Unable to resolve symbol: email in this context
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
+(#<promise$settable_future$reify__6969@3179b9c: 
+   {:db-before datomic.db.Db@526f7f3d,
+    :db-after datomic.db.Db@bee8f4a8,
+    :tx-data
+    [#datom[13194139534313 50 #inst "2021-05-24T18:24:44.690-00:00" 13194139534313 true] #datom[17592186045418 72 #uuid "18cf5d42-70e5-4f24-bfa1-a60140ebc6c3" 13194139534313 true] #datom[17592186045418 73 "Fulano de Tal" 13194139534313 true] #datom[17592186045418 74 "fulano@gmail.com" 13194139534313 true] #datom[17592186045418 75 "12345600000" 13194139534313 true]],
+    :tempids {-9223301668109598013 17592186045418}}>
+ #<promise$settable_future$reify__6969@53aeb7f5: 
+   {:db-before datomic.db.Db@bee8f4a8,
+    :db-after datomic.db.Db@eadf5d8b,
+    :tx-data
+    [#datom[13194139534315 50 #inst "2021-05-24T18:24:44.695-00:00" 13194139534315 true] #datom[17592186045420 72 #uuid "50bcc040-48ae-4b7e-b75e-985399935806" 13194139534315 true] #datom[17592186045420 73 "Maria de Tal" 13194139534315 true] #datom[17592186045420 74 "maria@lala.com" 13194139534315 true] #datom[17592186045420 75 "55345600000" 13194139534315 true]],
+    :tempids {-9223301668109598012 17592186045420}}>
+ #<promise$settable_future$reify__6969@261e040a: 
+   {:db-before datomic.db.Db@eadf5d8b,
+    :db-after datomic.db.Db@9d34b60c,
+    :tx-data
+    [#datom[13194139534317 50 #inst "2021-05-24T18:24:44.699-00:00" 13194139534317 true] #datom[17592186045422 72 #uuid "859a3a40-7fa4-444b-abd5-cc47044baa53" 13194139534317 true] #datom[17592186045422 73 "José Silva" 13194139534317 true] #datom[17592186045422 74 "jose@uol.com" 13194139534317 true] #datom[17592186045422 75 "99345600000" 13194139534317 true]],
+    :tempids {-9223301668109598011 17592186045422}}>)
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/credit-card.clj:22:1).
+; No such namespace: md
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: credit-card.clj
+(#datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598010 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598010 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x1748a496] #datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598009 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598009 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x51ac7b5a] #datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598008 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598008 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x373dec80] #datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598007 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598007 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x5ec90f19] #datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598006 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598006 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0xc776c42] #datomic.promise/settable-future/reify--6969[{:status :failed, :val #error {
+ :cause ":db.error/nil-value Nil is not a legal value"
+ :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598005 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+ :via
+ [{:type java.util.concurrent.ExecutionException
+   :message "java.lang.IllegalArgumentException: :db.error/nil-value Nil is not a legal value"
+   :at [datomic.promise$throw_executionexception_if_throwable invokeStatic "promise.clj" 10]}
+  {:type datomic.impl.Exceptions$IllegalArgumentExceptionInfo
+   :message ":db.error/nil-value Nil is not a legal value"
+   :data {:cognitect.anomalies/category :cognitect.anomalies/incorrect, :cognitect.anomalies/message "Nil is not a legal value", :data [:db/add -9223301668109598005 77 nil], :attribute :credit-card/number, :db/error :db.error/nil-value}
+   :at [datomic.error$arg invokeStatic "error.clj" 79]}]
+ :trace
+ [[datomic.error$arg invokeStatic "error.clj" 79]
+  [datomic.error$arg invoke "error.clj" 74]
+  [datomic.db$validated_v_for_attr invokeStatic "db.clj" 3067]
+  [datomic.db$validated_v_for_attr invoke "db.clj" 3061]
+  [datomic.db.ProcessInpoint inject "db.clj" 3117]
+  [datomic.db.ProcessInpoint inject "db.clj" 3105]
+  [datomic.transaction$inject_all$fn__8582 invoke "transaction.clj" 174]
+  [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+  [clojure.core$reduce invokeStatic "core.clj" 6827]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [datomic.transaction$inject_all invokeStatic "transaction.clj" 170]
+  [datomic.transaction$inject_all invoke "transaction.clj" 168]
+  [datomic.peer.Connection transactAsync "peer.clj" 318]
+  [datomic.peer.Connection transact "peer.clj" 311]
+  [datomic.api$transact invokeStatic "api.clj" 107]
+  [datomic.api$transact invoke "api.clj" 105]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invokeStatic "credit-card.clj" 6]
+  [curso_clojure_cartao2.db.credit_card$add_credit_card_BANG_ invoke "credit-card.clj" 4]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invokeStatic "credit-card.clj" 10]
+  [curso_clojure_cartao2.controllers.credit_card$new_credit_card_BANG_ invoke "credit-card.clj" 7]
+  [curso_clojure_cartao2.controllers.credit_card$eval12307$fn__12308 invoke "credit-card.clj" 23]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2753]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$print_sequential invokeStatic "core_print.clj" 53]
+  [clojure.core$fn__7310 invokeStatic "core_print.clj" 174]
+  [clojure.core$fn__7310 invoke "core_print.clj" 174]
+  [clojure.lang.MultiFn invoke "MultiFn.java" 234]
+  [nrepl.middleware.print$pr_on invokeStatic "print.clj" 21]
+  [nrepl.middleware.print$pr_on invoke "print.clj" 17]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880$fn__881 invoke "print.clj" 148]
+  [nrepl.middleware.print$send_nonstreamed$print_key__880 invoke "print.clj" 147]
+  [clojure.core$map$fn__5862$fn__5863 invoke "core.clj" 2742]
+  [clojure.core.protocols$iter_reduce invokeStatic "protocols.clj" 49]
+  [clojure.core.protocols$fn__8140 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8140 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8088$G__8083__8101 invoke "protocols.clj" 13]
+  [clojure.core$transduce invokeStatic "core.clj" 6884]
+  [clojure.core$transduce invoke "core.clj" 6870]
+  [nrepl.middleware.print$send_nonstreamed invokeStatic "print.clj" 156]
+  [nrepl.middleware.print$send_nonstreamed invoke "print.clj" 138]
+  [nrepl.middleware.print$printing_transport$reify__897 send "print.clj" 174]
+  [nrepl.middleware.caught$caught_transport$reify__932 send "caught.clj" 58]
+  [nrepl.middleware.load_file$wrap_load_file$fn$reify__1472 send "load_file.clj" 95]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__996 invoke "interruptible_eval.clj" 123]
+  [clojure.main$repl$read_eval_print__9086 invoke "main.clj" 442]
+  [clojure.main$repl$fn__9095 invoke "main.clj" 458]
+  [clojure.main$repl invokeStatic "main.clj" 458]
+  [clojure.main$repl doInvoke "main.clj" 368]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__1006$fn__1010 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1073$fn__1077 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1073 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 748]]}} 0x3e33b03d])
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+(#<promise$settable_future$reify__6969@656e22d0: 
+   {:db-before datomic.db.Db@9d34b60c,
+    :db-after datomic.db.Db@2579bc5,
+    :tx-data
+    [#datom[13194139534319 50 #inst "2021-05-24T18:35:51.403-00:00" 13194139534319 true] #datom[17592186045424 76 #uuid "12eac593-ada1-4bab-9745-45b597d154ca" 13194139534319 true] #datom[17592186045424 77 "0000000000000001" 13194139534319 true] #datom[17592186045424 78 "123" 13194139534319 true] #datom[17592186045424 79 #inst "2027-03-31T00:00:00.000-00:00" 13194139534319 true] #datom[17592186045424 80 3000M 13194139534319 true] #datom[17592186045424 81 3000M 13194139534319 true] #datom[17592186045424 82 17592186045418 13194139534319 true]],
+    :tempids {-9223301668109598004 17592186045424}}>
+ #<promise$settable_future$reify__6969@66b3f21b: 
+   {:db-before datomic.db.Db@2579bc5,
+    :db-after datomic.db.Db@6d0272da,
+    :tx-data
+    [#datom[13194139534321 50 #inst "2021-05-24T18:35:51.408-00:00" 13194139534321 true] #datom[17592186045426 76 #uuid "1e224650-96e3-474e-911e-293c4f65236b" 13194139534321 true] #datom[17592186045426 77 "0000000000000002" 13194139534321 true] #datom[17592186045426 78 "234" 13194139534321 true] #datom[17592186045426 79 #inst "2024-01-31T00:00:00.000-00:00" 13194139534321 true] #datom[17592186045426 80 1000M 13194139534321 true] #datom[17592186045426 81 1000M 13194139534321 true] #datom[17592186045426 82 17592186045420 13194139534321 true]],
+    :tempids {-9223301668109598003 17592186045426}}>
+ #<promise$settable_future$reify__6969@382eead6: 
+   {:db-before datomic.db.Db@6d0272da,
+    :db-after datomic.db.Db@44960230,
+    :tx-data
+    [#datom[13194139534323 50 #inst "2021-05-24T18:35:51.411-00:00" 13194139534323 true] #datom[17592186045428 76 #uuid "c47ed7cc-3811-436d-beb6-9b112371e389" 13194139534323 true] #datom[17592186045428 77 "0000000000000003" 13194139534323 true] #datom[17592186045428 78 "235" 13194139534323 true] #datom[17592186045428 79 #inst "2025-03-31T00:00:00.000-00:00" 13194139534323 true] #datom[17592186045428 80 2000M 13194139534323 true] #datom[17592186045428 81 2000M 13194139534323 true] #datom[17592186045428 82 17592186045420 13194139534323 true]],
+    :tempids {-9223301668109598002 17592186045428}}>
+ #<promise$settable_future$reify__6969@30b3fc41: 
+   {:db-before datomic.db.Db@44960230,
+    :db-after datomic.db.Db@80399186,
+    :tx-data
+    [#datom[13194139534325 50 #inst "2021-05-24T18:35:51.415-00:00" 13194139534325 true] #datom[17592186045430 76 #uuid "deee94c6-ddcf-4e59-b566-4ebbae9f3b4e" 13194139534325 true] #datom[17592186045430 77 "0000000000000004" 13194139534325 true] #datom[17592186045430 78 "999" 13194139534325 true] #datom[17592186045430 79 #inst "2027-04-30T00:00:00.000-00:00" 13194139534325 true] #datom[17592186045430 80 4000M 13194139534325 true] #datom[17592186045430 81 4000M 13194139534325 true] #datom[17592186045430 82 17592186045418 13194139534325 true]],
+    :tempids {-9223301668109598001 17592186045430}}>
+ #<promise$settable_future$reify__6969@6bab8c87: 
+   {:db-before datomic.db.Db@80399186,
+    :db-after datomic.db.Db@d613566,
+    :tx-data
+    [#datom[13194139534327 50 #inst "2021-05-24T18:35:51.419-00:00" 13194139534327 true] #datom[17592186045432 76 #uuid "32978aff-b568-47ba-b56f-bf2a0f480f59" 13194139534327 true] #datom[17592186045432 77 "0000000000000005" 13194139534327 true] #datom[17592186045432 78 "432" 13194139534327 true] #datom[17592186045432 79 #inst "2027-03-30T00:00:00.000-00:00" 13194139534327 true] #datom[17592186045432 80 3000M 13194139534327 true] #datom[17592186045432 81 3000M 13194139534327 true] #datom[17592186045432 82 17592186045422 13194139534327 true]],
+    :tempids {-9223301668109598000 17592186045432}}>
+ #<promise$settable_future$reify__6969@342ac74: 
+   {:db-before datomic.db.Db@d613566,
+    :db-after datomic.db.Db@2e6be0d1,
+    :tx-data
+    [#datom[13194139534329 50 #inst "2021-05-24T18:35:51.424-00:00" 13194139534329 true] #datom[17592186045434 76 #uuid "b69c3541-8e37-408d-8a0b-1ed295e83d77" 13194139534329 true] #datom[17592186045434 77 "0000000000000006" 13194139534329 true] #datom[17592186045434 78 "123" 13194139534329 true] #datom[17592186045434 79 #inst "2030-09-30T00:00:00.000-00:00" 13194139534329 true] #datom[17592186045434 80 10000M 13194139534329 true] #datom[17592186045434 81 10000M 13194139534329 true] #datom[17592186045434 82 17592186045418 13194139534329 true]],
+    :tempids {-9223301668109597999 17592186045434}}>)
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: credit-card.clj
+#'curso-clojure-cartao2.controllers.credit-card/credit-cards-by-client
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: transaction.clj
+(#datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@f0888b3d, :db-after datomic.db.Db@10eb3bce, :tx-data [#datom[13194139534332 50 #inst "2021-05-24T18:41:04.621-00:00" 13194139534332 true] #datom[17592186045437 83 #uuid "8ea94698-3748-4eed-9344-f95bb704abf7" 13194139534332 true] #datom[17592186045437 84 30M 13194139534332 true] #datom[17592186045437 85 :food 13194139534332 true] #datom[17592186045437 86 #inst "2021-05-03T00:00:00.000-00:00" 13194139534332 true] #datom[17592186045437 87 "Wursteria" 13194139534332 true] #datom[17592186045437 88 17592186045424 13194139534332 true]], :tempids {-9223301668109597998 17592186045437}}} 0x2a3a9c11] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@727e7f57, :db-after datomic.db.Db@9e41d5b7, :tx-data [#datom[13194139534335 50 #inst "2021-05-24T18:41:04.631-00:00" 13194139534335 true] #datom[17592186045440 83 #uuid "a571cdb2-7c35-4455-9feb-4dd43bff278f" 13194139534335 true] #datom[17592186045440 84 100M 13194139534335 true] #datom[17592186045440 85 :health 13194139534335 true] #datom[17592186045440 86 #inst "2021-05-03T00:00:00.000-00:00" 13194139534335 true] #datom[17592186045440 87 "Drogarias Pacheco" 13194139534335 true] #datom[17592186045440 88 17592186045424 13194139534335 true]], :tempids {-9223301668109597997 17592186045440}}} 0x233c78a4] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@710d3e64, :db-after datomic.db.Db@1eecfffa, :tx-data [#datom[13194139534338 50 #inst "2021-05-24T18:41:04.642-00:00" 13194139534338 true] #datom[17592186045443 83 #uuid "810c3feb-b238-46b8-947e-14581cab0cff" 13194139534338 true] #datom[17592186045443 84 1M 13194139534338 true] #datom[17592186045443 85 :grocery 13194139534338 true] #datom[17592186045443 86 #inst "2021-05-04T00:00:00.000-00:00" 13194139534338 true] #datom[17592186045443 87 "Casa do Biscoito" 13194139534338 true] #datom[17592186045443 88 17592186045426 13194139534338 true]], :tempids {-9223301668109597996 17592186045443}}} 0x306b19c9] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@3d82d3c, :db-after datomic.db.Db@e1cf2580, :tx-data [#datom[13194139534341 50 #inst "2021-05-24T18:41:04.652-00:00" 13194139534341 true] #datom[17592186045446 83 #uuid "876be3fb-a2e0-43a4-a135-e80bcfcc6917" 13194139534341 true] #datom[17592186045446 84 73M 13194139534341 true] #datom[17592186045446 85 :grocery 13194139534341 true] #datom[17592186045446 86 #inst "2021-05-04T00:00:00.000-00:00" 13194139534341 true] #datom[17592186045446 87 "Supermercado Guanabara" 13194139534341 true] #datom[17592186045446 88 17592186045428 13194139534341 true]], :tempids {-9223301668109597995 17592186045446}}} 0x3b21687d] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@eafd93e6, :db-after datomic.db.Db@798aa8e5, :tx-data [#datom[13194139534344 50 #inst "2021-05-24T18:41:04.661-00:00" 13194139534344 true] #datom[17592186045449 83 #uuid "06991a24-98e4-49a8-aedf-1230697f72a2" 13194139534344 true] #datom[17592186045449 84 99M 13194139534344 true] #datom[17592186045449 85 :grocery 13194139534344 true] #datom[17592186045449 86 #inst "2021-05-05T00:00:00.000-00:00" 13194139534344 true] #datom[17592186045449 87 "Supermercado Guanabara" 13194139534344 true] #datom[17592186045449 88 17592186045430 13194139534344 true]], :tempids {-9223301668109597994 17592186045449}}} 0x33e5e155] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@fd29ad6c, :db-after datomic.db.Db@9c0ccb25, :tx-data [#datom[13194139534347 50 #inst "2021-05-24T18:41:04.671-00:00" 13194139534347 true] #datom[17592186045452 83 #uuid "713f2854-0cb5-4a14-87a1-d5af0697474f" 13194139534347 true] #datom[17592186045452 84 300M 13194139534347 true] #datom[17592186045452 85 :food 13194139534347 true] #datom[17592186045452 86 #inst "2021-05-06T00:00:00.000-00:00" 13194139534347 true] #datom[17592186045452 87 "Dominos" 13194139534347 true] #datom[17592186045452 88 17592186045430 13194139534347 true]], :tempids {-9223301668109597993 17592186045452}}} 0x3b731fbe] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@6191b0bc, :db-after datomic.db.Db@32e8edd7, :tx-data [#datom[13194139534350 50 #inst "2021-05-24T18:41:04.680-00:00" 13194139534350 true] #datom[17592186045455 83 #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65" 13194139534350 true] #datom[17592186045455 84 12M 13194139534350 true] #datom[17592186045455 85 :health 13194139534350 true] #datom[17592186045455 86 #inst "2021-05-06T00:00:00.000-00:00" 13194139534350 true] #datom[17592186045455 87 "DragaRaia" 13194139534350 true] #datom[17592186045455 88 17592186045432 13194139534350 true]], :tempids {-9223301668109597992 17592186045455}}} 0x75464344] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@5c8ff66b, :db-after datomic.db.Db@411b343c, :tx-data [#datom[13194139534353 50 #inst "2021-05-24T18:41:04.688-00:00" 13194139534353 true] #datom[17592186045458 83 #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a" 13194139534353 true] #datom[17592186045458 84 10M 13194139534353 true] #datom[17592186045458 85 :food 13194139534353 true] #datom[17592186045458 86 #inst "2021-05-10T00:00:00.000-00:00" 13194139534353 true] #datom[17592186045458 87 "China in Box" 13194139534353 true] #datom[17592186045458 88 17592186045432 13194139534353 true]], :tempids {-9223301668109597991 17592186045458}}} 0x17db137b] #datomic.promise/settable-future/reify--6969[{:status :ready, :val {:db-before datomic.db.Db@6d1df97a, :db-after datomic.db.Db@161fde0a, :tx-data [#datom[13194139534356 50 #inst "2021-05-24T18:41:04.696-00:00" 13194139534356 true] #datom[17592186045461 83 #uuid "597b6321-ddd6-453a-bb03-d9dee0b79d1d" 13194139534356 true] #datom[17592186045461 84 15M 13194139534356 true] #datom[17592186045461 85 :grocery 13194139534356 true] #datom[17592186045461 86 #inst "2021-05-10T00:00:00.000-00:00" 13194139534356 true] #datom[17592186045461 87 "Casa do Biscoito" 13194139534356 true] #datom[17592186045461 88 17592186045424 13194139534356 true]], :tempids {-9223301668109597990 17592186045461}}} 0x4da12228])
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:25:1).
+; Unable to resolve symbol: transactions-by-credit-card in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (IllegalArgumentException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:25:1).
+; Cannot resolve key: 1e224650-96e3-474e-911e-293c4f65236b
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.datalog/resolve-id (datalog.clj:273).
+; Cannot resolve key: 1e224650-96e3-474e-911e-293c4f65236b
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[[#:transaction{:id #uuid "810c3feb-b238-46b8-947e-14581cab0cff",
+                :value 1M,
+                :category :grocery,
+                :date #inst "2021-05-04T00:00:00.000-00:00",
+                :merchant "Casa do Biscoito"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]
+ [#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+                :value 10M,
+                :category :food,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "China in Box"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"} #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: credit-card.clj
+#'curso-clojure-cartao2.controllers.credit-card/credit-cards-by-client
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: logic.clj
+#'curso-clojure-cartao2.logic/limit-available?
+clj꞉curso-clojure-cartao2.logic꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:31:1).
+; Unable to resolve symbol: transactions-grouped-by-category in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+{:health [#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"}], :food [#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"}]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+{:health
+ [#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}],
+ :food
+ [#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+                :value 10M,
+                :category :food,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "China in Box"}]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ArityException) at curso-clojure-cartao2.controllers.transaction/eval12559 (form-init4688402661101875967.clj:35).
+; Wrong number of args (3) passed to: curso-clojure-cartao2.controllers.transaction/transactions-grouped-by-category
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:35:1).
+; No such namespace: logic
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; No such namespace: logic
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:382).
+; java.utils.Date.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:37:1).
+; Unable to resolve symbol: .java.utils.Date. in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error (ClassNotFoundException) compiling new at (src/curso_clojure_cartao2/controllers/transaction.clj:37:9).
+; java.utils.Date
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error (IllegalArgumentException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:37:9).
+; Malformed member expression, expecting (.member target ...)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Malformed member expression, expecting (.member target ...)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Malformed member expression, expecting (.member target ...)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Malformed member expression, expecting (.member target ...)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Malformed member expression, expecting (.member target ...)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error (ClassNotFoundException) compiling new at (src/curso_clojure_cartao2/controllers/transaction.clj:37:1).
+; java.utils.Date
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#inst "2021-05-24T19:18:55.019-00:00"
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at curso-clojure-cartao2.controllers.transaction/eval12596 (form-init4688402661101875967.clj:38).
+; No matching field found: Month for class java.util.Date
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at curso-clojure-cartao2.controllers.transaction/eval12598 (form-init4688402661101875967.clj:38).
+; No matching field found: MONTH for class java.util.Date
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+4
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#inst "2021-05-24T19:20:44.718-00:00"
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+4
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+121
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#inst "2021-05-24T19:22:38.869-00:00"
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+24
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+1
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+121
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+2021
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:35:1).
+; No such namespace: logic
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:35:1).
+; Unable to resolve symbol: ?transaction-date in this context
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+com.google.common.cache.LocalCache$Segment/get (LocalCache.java:2051)
+com.google.common.cache.LocalCache/get (LocalCache.java:3951)
+com.google.common.cache.LocalCache/getOrLoad (LocalCache.java:3974)
+com.google.common.cache.LocalCache$LocalLoadingCache/get (LocalCache.java:4935)
+datomic.cache/fn (cache.clj:75)
+datomic.cache/fn (cache.clj:70)
+datomic.cache/fn (cache.clj:67)
+datomic.cache.WrappedGCache/valAt (cache.clj:106)
+clojure.lang.RT/get (RT.java:760)
+datomic.query/q* (query.clj:747)
+datomic.query/q* (query.clj:742)
+datomic.query/q (query.clj:794)
+datomic.query/q (query.clj:791)
+datomic.api/q (api.clj:44)
+datomic.api/q (api.clj:42)
+curso-clojure-cartao2.db.transaction/transactions-by-month-and-year (transaction.clj:23)
+curso-clojure-cartao2.db.transaction/transactions-by-month-and-year (transaction.clj:21)
+curso-clojure-cartao2.controllers.transaction/transactions-by-month (transaction.clj:32)
+curso-clojure-cartao2.controllers.transaction/transactions-by-month (transaction.clj:30)
+curso-clojure-cartao2.controllers.transaction/eval12764 (form-init4688402661101875967.clj:35)
+clojure.lang.Compiler/eval (Compiler.java:7177)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:748)
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:24 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:24 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:24 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:24 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:24 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:24 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:24 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:34:24 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :credit-card-/id
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:24 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:34:24 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error reading source at (src/curso_clojure_cartao2/db/transaction.clj:36:57).
+; Unmatched delimiter: )
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:25 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:34:25 - reference to field getMonth can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:23 - reference to field getYear can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?transaction-date in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:23 - reference to field getYear can't be resolved.
+; Execution error at datomic.datalog/compile-expr-clause (datalog.clj:1143).
+; Unable to resolve symbol: ?year in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+()
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:35:1).
+; Unable to resolve symbol: billing-statement in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:32:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:33:23 - reference to field getMonth can't be resolved.
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"} #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+()
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (IllegalArgumentException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:39:1).
+; Argument (pull ?entity :transaction/value) in :find is not a variable
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
+; Argument (pull ?entity [:transaction/value]) in :find is not a variable
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
+; Argument (pull ?entity [:transaction/value]) in :find is not a variable
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
+; Argument (pull ?entity [:transaction/value]) in :find is not a variable
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
+; Argument (pull ?entity [:transaction/value]) in :find is not a variable
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:46:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:44:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:44:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:45:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]
+ [#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+                :value 10M,
+                :category :food,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "China in Box"}]]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:47:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:48:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]
+ [#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+                :value 10M,
+                :category :food,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "China in Box"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+#{[12M] [10M]}
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:43:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:44:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#{[12M] [10M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#{[12M] [10M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#{[12M] [10M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#{[12M] [10M]}
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[[22M]]
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:43:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/controllers/transaction.clj:44:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[22M]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[22M]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (ArityException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:40:1).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ArityException) at curso-clojure-cartao2.controllers.transaction/billing-statement-total-value (transaction.clj:37).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ArityException) at curso-clojure-cartao2.controllers.transaction/billing-statement-total-value (transaction.clj:37).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (ArityException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:40:1).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ArityException) at curso-clojure-cartao2.controllers.transaction/billing-statement-total-value (transaction.clj:37).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (ArityException) at curso-clojure-cartao2.controllers.transaction/billing-statement-total-value (transaction.clj:37).
+; Wrong number of args (5) passed to: curso-clojure-cartao2.db.transaction/transactions-total-value-by-month-and-year
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+22M
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+22M
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+nil
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+nil
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+22M
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:44:1).
+; Unable to resolve symbol: transactions-by-merchant in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+; Syntax error (IllegalArgumentException) compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:44:1).
+; Cannot resolve key: 32978aff-b568-47ba-b56f-bf2a0f480f59
+; Evaluation of file transaction.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (IllegalArgumentException) at datomic.datalog/resolve-id (datalog.clj:273).
+; Cannot resolve key: 32978aff-b568-47ba-b56f-bf2a0f480f59
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :credit-card-/id
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :credit-card-/id
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :credit-card-/id
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+                :value 10M,
+                :category :food,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "China in Box"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+[[#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+                :value 12M,
+                :category :health,
+                :date #inst "2021-05-06T00:00:00.000-00:00",
+                :merchant "DragaRaia"}]]
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+#'curso-clojure-cartao2.controllers.transaction/transactions-by-merchant
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:50:1).
+; Unable to resolve symbol: transactions-by-value in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/controllers/transaction.clj:50:1).
+; Unable to resolve symbol: transactions-by-value in this context
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65", :value 12M, :category :health, :date #inst "2021-05-06T00:00:00.000-00:00", :merchant "DragaRaia"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+(#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/core.clj:13:1).
+; No such namespace: c-client
+clj꞉curso-clojure-cartao2.core꞉> 
+; Syntax error compiling at (src/curso_clojure_cartao2/core.clj:13:1).
+; No such namespace: c-client
+clj꞉curso-clojure-cartao2.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling at (src/curso_clojure_cartao2/core.clj:16:1).
+; Unable to resolve symbol: credit-card-by-number in this context
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉curso-clojure-cartao2.core꞉> 
+clj꞉curso-clojure-cartao2.core꞉> 
+#:client{:id #uuid "859a3a40-7fa4-444b-abd5-cc47044baa53",
+         :name "José Silva",
+         :email "jose@uol.com",
+         :cpf "99345600000"}
+clj꞉curso-clojure-cartao2.core꞉> 
+#:credit-card{:id #uuid "32978aff-b568-47ba-b56f-bf2a0f480f59",
+              :number "0000000000000005",
+              :cvv "432",
+              :expiry-date #inst "2027-03-30T00:00:00.000-00:00",
+              :available-limit 2978M,
+              :total-limit 3000M,
+              :client #:client{:id #uuid "859a3a40-7fa4-444b-abd5-cc47044baa53"}}
+clj꞉curso-clojure-cartao2.core꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.core꞉> 
+(#:transaction{:id #uuid "7f180fc1-0cb6-4b24-820e-2627c015bf65",
+               :value 12M,
+               :category :health,
+               :date #inst "2021-05-06T00:00:00.000-00:00",
+               :merchant "DragaRaia"}
+ #:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a",
+               :value 10M,
+               :category :food,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.core꞉> 
+(#:transaction{:id #uuid "8ea94698-3748-4eed-9344-f95bb704abf7",
+               :value 30M,
+               :category :food,
+               :date #inst "2021-05-03T00:00:00.000-00:00",
+               :merchant "Wursteria"}
+ #:transaction{:id #uuid "a571cdb2-7c35-4455-9feb-4dd43bff278f",
+               :value 100M,
+               :category :health,
+               :date #inst "2021-05-03T00:00:00.000-00:00",
+               :merchant "Drogarias Pacheco"}
+ #:transaction{:id #uuid "597b6321-ddd6-453a-bb03-d9dee0b79d1d",
+               :value 15M,
+               :category :grocery,
+               :date #inst "2021-05-10T00:00:00.000-00:00",
+               :merchant "Casa do Biscoito"})
+clj꞉curso-clojure-cartao2.core꞉> 
+{:food
+ [#:transaction{:id #uuid "8ea94698-3748-4eed-9344-f95bb704abf7",
+                :value 30M,
+                :category :food,
+                :date #inst "2021-05-03T00:00:00.000-00:00",
+                :merchant "Wursteria"}],
+ :health
+ [#:transaction{:id #uuid "a571cdb2-7c35-4455-9feb-4dd43bff278f",
+                :value 100M,
+                :category :health,
+                :date #inst "2021-05-03T00:00:00.000-00:00",
+                :merchant "Drogarias Pacheco"}],
+ :grocery
+ [#:transaction{:id #uuid "597b6321-ddd6-453a-bb03-d9dee0b79d1d",
+                :value 15M,
+                :category :grocery,
+                :date #inst "2021-05-10T00:00:00.000-00:00",
+                :merchant "Casa do Biscoito"}]}
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/core.clj:43:23 - reference to field getYear can't be resolved.
+; Reflection warning, /Users/hugo.crisostomo/Projetos/curso-clojure-cartao2/src/curso_clojure_cartao2/core.clj:44:23 - reference to field getMonth can't be resolved.
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+clj꞉curso-clojure-cartao2.core꞉> 
+145M
+clj꞉curso-clojure-cartao2.core꞉> 
+(#:transaction{:id #uuid "8ea94698-3748-4eed-9344-f95bb704abf7",
+               :value 30M,
+               :category :food,
+               :date #inst "2021-05-03T00:00:00.000-00:00",
+               :merchant "Wursteria"})
+clj꞉curso-clojure-cartao2.core꞉> 
+(#:transaction{:id #uuid "a571cdb2-7c35-4455-9feb-4dd43bff278f",
+               :value 100M,
+               :category :health,
+               :date #inst "2021-05-03T00:00:00.000-00:00",
+               :merchant "Drogarias Pacheco"})
+clj꞉curso-clojure-cartao2.core꞉> 
+; Evaluating file: core.clj
+(#:transaction{:id #uuid "a571cdb2-7c35-4455-9feb-4dd43bff278f", :value 100M, :category :health, :date #inst "2021-05-03T00:00:00.000-00:00", :merchant "Drogarias Pacheco"})
+clj꞉curso-clojure-cartao2.core꞉> 
+; Evaluating file: mock-data.clj
+#'curso-clojure-cartao2.mock-data/transaction-data
+clj꞉curso-clojure-cartao2.mock-data꞉> 
+; Evaluating file: transaction.clj
+#'curso-clojure-cartao2.db.transaction/transactions-by-value
+clj꞉curso-clojure-cartao2.db.transaction꞉> 
+; Evaluating file: transaction.clj
+(#:transaction{:id #uuid "8a8f76a5-17e8-408b-9f92-0ec8c7169d5a", :value 10M, :category :food, :date #inst "2021-05-10T00:00:00.000-00:00", :merchant "China in Box"})
+clj꞉curso-clojure-cartao2.controllers.transaction꞉> 
+; Evaluating file: logic.clj
+#'curso-clojure-cartao2.logic/limit-available?
+clj꞉curso-clojure-cartao2.logic꞉> 
+; Evaluating file: credit-card.clj
+#'curso-clojure-cartao2.controllers.credit-card/credit-cards-by-client
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: credit-card.clj
+#'curso-clojure-cartao2.controllers.credit-card/credit-cards-by-client
+clj꞉curso-clojure-cartao2.controllers.credit-card꞉> 
+; Evaluating file: client.clj
+#'curso-clojure-cartao2.controllers.client/client-by-id
+clj꞉curso-clojure-cartao2.controllers.client꞉> 
